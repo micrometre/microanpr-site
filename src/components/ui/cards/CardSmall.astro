@@ -1,7 +1,6 @@
 ---
 // Import necessary modules and utilities
 import { Image } from "astro:assets";
-import Icon from "../icons/Icon.astro";
 import type { CollectionEntry } from "astro:content";
 
 const { product } = Astro.props;
@@ -34,8 +33,3 @@ const imageClass =
   >
   </div>
   <!-- The product's subtitle and the anchor SVG icon-->
-  <span
-    class="relative mb-3 ml-4 inline-block text-sm font-bold text-neutral-50 transition duration-[600ms] ease-[cubic-bezier(0.45,0,0.55,1)] group-hover:scale-110 md:ml-5 md:text-lg"
-    >{product.data.description} <Icon name="openInNew" />
-  </span>
-</a>

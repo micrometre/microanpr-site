@@ -1,7 +1,6 @@
 ---
 // Import section components
 import MainLayout from "@/layouts/MainLayout.astro";
-import Btn404 from "@/components/ui/buttons/Btn404.astro";
 import { SITE } from "@/data_files/constants";
 
 const pageTitle: string = `Page Not Found | ${SITE.title}`;
@@ -38,7 +37,6 @@ const btnTitle: string = "Go Back";
           {content}
         </p>
         <!--Display a button that navigates user back to the previous page-->
-        <Btn404 title={btnTitle} id="go-back" />
       </div>
     </div>
   </section>
