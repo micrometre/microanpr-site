@@ -1,0 +1,36 @@
+---
+// Importing necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import CardSmall from "@/components/ui/cards/CardSmall.astro";
+import CardWide from "@/components/ui/cards/CardWide.astro";
+
+// Importing necessary functions from Astro
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { SITE } from "@/data_files/constants";
+
+// Fetching all the product related content and sorting it by main.id
+const product: CollectionEntry<"products">[] = (
+  await getCollection("products")
+).sort(
+  (a: CollectionEntry<"products">, b: CollectionEntry<"products">) =>
+    a.data.main.id - b.data.main.id,
+);
+---
+
+<MainLayout>
+  <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+      {
+        product.map((product, index) => {
+          const position = index % 4;
+          if (position === 0 || position === 3) {
+            return <CardSmall product={product} />;
+          } else {
+            return <CardWide product={product} />;
+          }
+        })
+      }
+    </section>
+  </div>
+</MainLayout>
