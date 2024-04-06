@@ -5,9 +5,9 @@ main:
   id: 1
   content: |
     Upload an unlimited number of files containing video footage of any length or photos. 
-  imgCard: "@/images/product-image-1.avif"
-  imgMain: "@/images/product-image-main-1.avif"
-  imgAlt: "Mockup boxes of machine screws set"
+  imgCard: "@/images/dashboard-image.avif"
+  imgMain: "@/images/dashboard-image.avif"
+  imgAlt: "dashboard picture"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
@@ -19,9 +19,9 @@ tabs:
     dataTab: "#tabs-with-card-3"
     title: "Blueprints"
 longDescription:
-  title: "Precision Fastening Solutions"
+  title: "Automatic Number Plate Recognition (ANPR) as a service"
   subTitle: |
-    The SF-TB T845 Machine Screws offer unparalleled precision and reliability for industrial applications, ensuring seamless operation and longevity for your machinery and equipment.
+    MicroANPR allows your organization to get quickly up and running  at minimal upfront cost.
   btnTitle: "Contact sales to learn more"
   btnURL: "#"
 descriptionList:
