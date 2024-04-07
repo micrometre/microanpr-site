@@ -23,18 +23,6 @@ const { title } = Astro.props;
 			  document.documentElement.classList.remove("dark");
 			}
 		  </script>
-		  <script is:inline src="/scripts/vendor/lenis/lenis.js"></script>
-		  <script is:inline>
-			// Script to handle Lenis library settings for smooth scrolling
-			const lenis = new Lenis({ smooth: true, smoothTouch: false });
-	  
-			function raf(time) {
-			  lenis.raf(time);
-			  requestAnimationFrame(raf);
-			}
-	  
-			requestAnimationFrame(raf);
-		  </script>
 		<meta charset="UTF-8" />
 		<meta name="description" content="MicroALPR description" />
 		<meta name="viewport" content="width=device-width" />
