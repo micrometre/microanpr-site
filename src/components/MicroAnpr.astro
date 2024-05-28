@@ -2,7 +2,8 @@
 import { Image } from "astro:assets";
 import ImgMain from "../images/Registration_Plate.svg";
 import ImgFeatre from "../images/blueprints-image2.avif";
-import ImgDash from "../images/dash2.avif";
+import ImgDash2 from "../images/dash2.avif";
+import ImgDash1 from "../images/dash1.avif";
 import ImgBluePrint from "../images/blueprint-1.avif";
 import ImgBluePrint2 from "../images/blueprint-2.avif";
 ---
@@ -26,8 +27,7 @@ import ImgBluePrint2 from "../images/blueprint-2.avif";
                     class="mb-8 max-w-prose text-pretty font-light text-neutral-700 dark:text-neutral-300 sm:text-xl"
                     style="translate: none; rotate: none; scale: none; will-change: transform, opacity; transform: translate(0px, 0px); opacity: 1; visibility: inherit;"
                 >
-                    Upload an unlimited number of files containing video footage
-                    of any length or photos.
+                    Upload an unlimited number of video files of any length for ANPR lookup.
                 </p>
             </div><div
                 class="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0"
@@ -44,7 +44,7 @@ import ImgBluePrint2 from "../images/blueprint-2.avif";
                     </p>
                 </div><div>
                     <Image
-                        src={ImgDash}
+                        src={ImgDash1}
                         class="w-[600px]"
                         loading={"eager"}
                         alt="dashboard picture"
@@ -267,7 +267,7 @@ import ImgBluePrint2 from "../images/blueprint-2.avif";
                     class="relative left-12 top-12 z-10 overflow-hidden rounded-xl shadow-lg md:left-12 md:top-16 md:-ml-12 lg:ml-0"
                 >
                     <Image
-                        src={ImgBluePrint}
+                        src={ImgDash2}
                         class="h-full w-full object-cover object-center"
                         loading={"eager"}
                         alt="Blueprint Illustration"
