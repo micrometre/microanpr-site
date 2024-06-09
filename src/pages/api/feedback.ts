@@ -1,5 +1,4 @@
 import type { APIRoute } from "astro";
-const filepath = "./fish.db";
 
 
 
