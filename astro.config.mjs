@@ -4,8 +4,10 @@ import vercelStatic from "@astrojs/vercel/static";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
-
 import netlify from "@astrojs/netlify";
+import react from "@astrojs/react";
+
+import db from "@astrojs/db";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,8 +20,8 @@ export default defineConfig({
   integrations: [tailwind(), sitemap(), compressor({
     gzip: false,
     brotli: true
-  })],
-  output: "static",
+  }), react(), db()],
+  output: "server",
   experimental: {
     clientPrerender: true,
     directRenderScript: true
