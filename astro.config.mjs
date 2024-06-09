@@ -5,28 +5,24 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "http://192.168.1.122/",
   image: {
-    domains: ["images.unsplash.com"],
+    domains: ["images.unsplash.com"]
   },
-
   prefetch: true,
-  integrations: [
-    tailwind(),
-    sitemap(),
-
-    compressor({
-      gzip: false,
-      brotli: true,
-    }),
-  ],
+  integrations: [tailwind(), sitemap(), compressor({
+    gzip: false,
+    brotli: true
+  })],
   output: "static",
   experimental: {
     clientPrerender: true,
-    directRenderScript: true,
+    directRenderScript: true
   },
-  adapter: vercelStatic(),
+  adapter: netlify()
 });
