@@ -7,7 +7,6 @@ import starlight from "@astrojs/starlight";
 import netlify from "@astrojs/netlify";
 import react from "@astrojs/react";
 
-import db from "@astrojs/db";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,7 +19,7 @@ export default defineConfig({
   integrations: [tailwind(), sitemap(), compressor({
     gzip: false,
     brotli: true
-  }), react(), db()],
+  }), react()],
   output: "server",
   experimental: {
     clientPrerender: true,

@@ -53,22 +53,53 @@ export default function Form() {
                           name="last-name" autoComplete="last-name" required /></label>
                       </div>
                     </div>
-                      <label htmlFor="email"><input type="email" id="email" placeholder="Email"
-                        className="block w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700 placeholder:text-neutral-500 focus:border-neutral-200 focus:outline-none focus:ring focus:ring-neutral-400 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-600 dark:bg-neutral-700/30 dark:text-neutral-300 dark:placeholder:text-neutral-400 dark:focus:ring-1"
-                        name="email" autoComplete="email" required /></label>
-                      <label htmlFor="phone"><input type="phone" id="phone" placeholder="Phone Number"
-   											className="block w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700 placeholder:text-neutral-500 focus:border-neutral-200 focus:outline-none focus:ring focus:ring-neutral-400 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-600 dark:bg-neutral-700/30 dark:text-neutral-300 dark:placeholder:text-neutral-400 dark:focus:ring-1"
+                    <label htmlFor="email"><input type="email" id="email" placeholder="Email"
+                      className="block w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700 placeholder:text-neutral-500 focus:border-neutral-200 focus:outline-none focus:ring focus:ring-neutral-400 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-600 dark:bg-neutral-700/30 dark:text-neutral-300 dark:placeholder:text-neutral-400 dark:focus:ring-1"
+                      name="email" autoComplete="email" required /></label>
+                    <label htmlFor="phone"><input type="phone" id="phone" placeholder="Phone Number"
+                      className="block w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700 placeholder:text-neutral-500 focus:border-neutral-200 focus:outline-none focus:ring focus:ring-neutral-400 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-600 dark:bg-neutral-700/30 dark:text-neutral-300 dark:placeholder:text-neutral-400 dark:focus:ring-1"
 
-                       name="phone" autoComplete="phone" required /></label>
-                      <label htmlFor="company">company<input type="company" id="company" name="company" autoComplete="company" required /></label>
-                      <br />
-                      <label htmlFor="message">Message<textarea id="message" name="message" autoComplete="off" required /></label>
-                      <br />
-                      <br />
-                      <button>Send</button>
-                      {responseMessage && <p>{responseMessage}</p>}
+                      name="phone" autoComplete="phone" required /></label>
+                    <label htmlFor="company"><input type="company" id="company" placeholder="Company"
+                      className="block w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700 placeholder:text-neutral-500 focus:border-neutral-200 focus:outline-none focus:ring focus:ring-neutral-400 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-600 dark:bg-neutral-700/30 dark:text-neutral-300 dark:placeholder:text-neutral-400 dark:focus:ring-1"
+                      name="company" autoComplete="company" required /></label>
+                    <label htmlFor="message">
+                      <textarea id="message" placeholder="Details" name="message" autoComplete="off" required
+                        className="block w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-700 placeholder:text-neutral-500 focus:border-neutral-200 focus:outline-none focus:ring focus:ring-neutral-400 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-600 dark:bg-neutral-700/30 dark:text-neutral-300 dark:placeholder:text-neutral-400 dark:focus:ring-1"
+                      />
+                    </label>
+                    <div className="mt-4 grid">
+                      <button className="inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent bg-yellow-400 px-4 py-3 text-sm font-bold text-neutral-700 outline-none ring-zinc-500 transition duration-300 hover:bg-yellow-500 focus-visible:ring disabled:pointer-events-none disabled:opacity-50 dark:ring-zinc-200 dark:focus:outline-none 2xl:text-base">Send Message</button>
+                    </div>
+                    <div className="mt-3 text-center">
+                      <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                        We'll get back to you in 1-2 business
+                        days.
+                      </p>
+                    </div>
+                    {responseMessage && <p>{responseMessage}</p>}
                   </div>
                 </form>
+              </div>
+              <div className="divide-y divide-neutral-300 dark:divide-neutral-700">
+                <div className="flex gap-x-7 py-6">
+                  <div className="grow">
+                    <h3
+                      className="font-bold text-neutral-700 dark:text-neutral-300"
+                    >
+                      FAQ
+                    </h3><p
+                      className="mt-1 text-sm text-neutral-600 dark:text-neutral-400"
+                    >
+                      Explore our FAQ for quick, clear answers
+                      to common queries.
+                    </p><a
+                      className="group mt-2 inline-flex items-center gap-x-2 rounded-lg text-sm font-medium text-zinc-600 outline-none ring-zinc-500 transition duration-300 hover:text-zinc-800 focus-visible:ring dark:text-zinc-400 dark:ring-zinc-200 dark:hover:text-zinc-200 dark:focus:outline-none dark:focus:ring-1"
+                      href="#"
+                    >Visit FAQ
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
