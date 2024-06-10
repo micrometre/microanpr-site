@@ -3,8 +3,6 @@ import tailwind from "@astrojs/tailwind";
 import vercelStatic from "@astrojs/vercel/static";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
-import starlight from "@astrojs/starlight";
-import netlify from "@astrojs/netlify";
 import react from "@astrojs/react";
 
 
@@ -25,5 +23,5 @@ export default defineConfig({
     clientPrerender: true,
     directRenderScript: true
   },
-  adapter: netlify()
+  adapter: vercelStatic(),
 });
