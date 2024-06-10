@@ -4,6 +4,8 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import react from "@astrojs/react";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
@@ -21,4 +23,5 @@ export default defineConfig({
     clientPrerender: true,
     directRenderScript: true
   },
+  adapter: netlify()
 });
