@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import react from "@astrojs/react";
 
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,5 +24,5 @@ export default defineConfig({
     clientPrerender: true,
     directRenderScript: true
   },
-  adapter: vercelStatic(),
+  adapter: netlify()
 });
