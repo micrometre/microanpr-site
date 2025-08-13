@@ -1,8 +1,5 @@
-'use client'
-
 import { Car, Shield, Building, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 
 const solutions = [
   {
@@ -92,12 +89,12 @@ export default function Solutions() {
               </ul>
 
               <div className="mt-6">
-                <Link
+                <a
                   href={solution.href}
                   className="text-sm font-semibold leading-6 text-blue-600 hover:text-blue-700 group-hover:underline transition-colors"
                 >
                   Learn more <span aria-hidden="true">→</span>
-                </Link>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -110,12 +107,12 @@ export default function Solutions() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <Link
+          <a
             href="/contact"
             className="rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
           >
             Discuss Your Requirements
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

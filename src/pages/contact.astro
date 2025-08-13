@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.jsx';
+import ContactForm from '../components/ContactForm.jsx';
+import { Mail, Phone, MapPin } from 'lucide-react';
+---
+
+<Layout title="Contact MicroANPR - Get Started Today" description="Contact MicroANPR to discuss your ANPR requirements. Our experts are ready to help you implement cutting-edge number plate recognition solutions.">
+  <Header client:load />
+  <main class="bg-gray-50">
+    <!-- Hero Section -->
+    <section class="bg-blue-600 py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            Get In Touch
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-blue-100">
+            Ready to transform your operations with cutting-edge ANPR technology? 
+            Our experts are here to help you find the perfect solution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-16 lg:max-w-none lg:grid-cols-2">
+          <!-- Contact Information -->
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900">
+              Let's discuss your requirements
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              Our team of ANPR experts is ready to understand your specific needs and 
+              provide tailored solutions that deliver measurable results.
+            </p>
+            
+            <div class="mt-10 space-y-8">
+              <div class="flex gap-x-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-600">
+                  <Phone className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 class="text-base font-semibold leading-7 text-gray-900">Phone</h3>
+                  <p class="mt-2 leading-7 text-gray-600">
+                    Call us directly for immediate assistance
+                  </p>
+                  <p class="text-sm font-semibold text-blue-600">+1 (555) 123-4567</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-x-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-600">
+                  <Mail className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 class="text-base font-semibold leading-7 text-gray-900">Email</h3>
+                  <p class="mt-2 leading-7 text-gray-600">
+                    Send us an email and we'll respond within 24 hours
+                  </p>
+                  <p class="text-sm font-semibold text-blue-600">sales@microanpr.com</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-x-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-600">
+                  <MapPin className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 class="text-base font-semibold leading-7 text-gray-900">Office</h3>
+                  <p class="mt-2 leading-7 text-gray-600">
+                    Visit our headquarters
+                  </p>
+                  <p class="text-sm font-semibold text-blue-600">
+                    123 Technology Drive, Suite 100<br />
+                    San Francisco, CA 94105
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <ContactForm client:load />
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

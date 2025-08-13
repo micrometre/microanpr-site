@@ -1,0 +1,36 @@
+---
+import '../styles/globals.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Leading provider of cutting-edge ANPR technology for traffic management, and smart city solutions." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="ANPR, automatic number plate recognition, enterprise security, traffic management, smart cities" />
+    <meta name="author" content="MicroANPR" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="MicroANPR - Enterprise ANPR Solutions" />
+    <meta property="og:description" content="Leading provider of cutting-edge ANPR technology as a service for security, traffic management, and smart city solutions." />
+    <meta property="og:type" content="website" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet" />
+    
+    <title>{title}</title>
+  </head>
+  <body class="font-sans antialiased">
+    <slot />
+  </body>
+</html>

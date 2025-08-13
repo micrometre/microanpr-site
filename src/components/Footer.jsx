@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
 
 const navigation = {
@@ -95,12 +94,12 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <Link
+                      <a
                         href={item.href}
                         className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                       >
                         {item.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -110,12 +109,12 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <Link
+                      <a
                         href={item.href}
                         className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                       >
                         {item.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -127,12 +126,12 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.resources.map((item) => (
                     <li key={item.name}>
-                      <Link
+                      <a
                         href={item.href}
                         className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                       >
                         {item.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -142,12 +141,12 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <Link
+                      <a
                         href={item.href}
                         className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                       >
                         {item.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>

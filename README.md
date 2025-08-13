@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MicroANPR Website
 
-## Getting Started
+A modern website for MicroANPR built with [Astro](https://astro.build) and React components.
 
-First, run the development server:
+## 🚀 Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Features.jsx
+│   │   ├── Solutions.jsx
+│   │   ├── Testimonials.jsx
+│   │   ├── CTA.jsx
+│   │   ├── Footer.jsx
+│   │   └── ContactForm.jsx
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       ├── index.astro
+│       ├── about.astro
+│       └── contact.astro
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧞 Commands
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All commands are run from the root of the project, from a terminal:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`     |
+| `npm run build`           | Build your production site to `./dist/`         |
+| `npm run preview`         | Preview your build locally, before deploying    |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`|
+| `npm run astro -- --help` | Get help using the Astro CLI                    |
 
-## Learn More
+## 🏗️ Features
 
-To learn more about Next.js, take a look at the following resources:
+- **Astro** for static site generation and optimal performance
+- **React** components for interactive elements (Header navigation, Contact form)
+- **Tailwind CSS** for styling
+- **Framer Motion** for animations
+- **Lucide React** for icons
+- **TypeScript** support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Responsive Design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The website is fully responsive and optimized for all device sizes.
 
-## Deploy on Vercel
+## 🔧 Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Framework**: Astro 4.x
+- **UI Library**: React 18
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Language**: TypeScript
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌟 Performance
+
+Astro generates static HTML with minimal JavaScript, ensuring excellent performance and SEO optimization. React components are only hydrated when needed using Astro's client directives.
+
+## 📄 Pages
+
+- **Home** (`/`) - Main landing page with hero, features, solutions, testimonials, and CTA
+- **About** (`/about`) - Company information, team, and history
+- **Contact** (`/contact`) - Contact form and company information
+
+## 🚀 Deployment
+
+Build the project for production:
+
+```bash
+npm run build
+```
+
+The built site will be in the `./dist/` directory, ready to be deployed to any static hosting service.

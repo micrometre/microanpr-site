@@ -1,7 +1,4 @@
-'use client'
-
 import { useState } from 'react'
-import Link from 'next/link'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -29,9 +26,9 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="text-2xl font-bold text-blue-600">MicroANPR</span>
-          </Link>
+          </a>
         </div>
         
         <div className="flex lg:hidden">
@@ -50,7 +47,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <div key={item.name} className="relative group">
-              <Link
+              <a
                 href={item.href}
                 className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
               >
@@ -58,7 +55,7 @@ export default function Header() {
                 {item.submenu && (
                   <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />
                 )}
-              </Link>
+              </a>
               
               {item.submenu && (
                 <div className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -70,10 +67,10 @@ export default function Header() {
                             <div className="h-6 w-6 text-gray-600 group-hover:text-blue-600" />
                           </div>
                           <div>
-                            <Link href={subitem.href} className="font-semibold text-gray-900">
+                            <a href={subitem.href} className="font-semibold text-gray-900">
                               {subitem.name}
                               <span className="absolute inset-0" />
-                            </Link>
+                            </a>
                             <p className="mt-1 text-gray-600">Advanced {subitem.name.toLowerCase()} solutions</p>
                           </div>
                         </div>
@@ -87,12 +84,12 @@ export default function Header() {
         </div>
         
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
+          <a
             href="/contact"
             className="bg-blue-600 px-4 py-2 text-sm font-semibold text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </nav>
       
@@ -119,14 +116,14 @@ export default function Header() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <Link
+                    <a
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
                 <div className="py-6">

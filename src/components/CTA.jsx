@@ -1,8 +1,5 @@
-'use client'
-
 import { ArrowRight, Phone, Mail } from 'lucide-react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 
 export default function CTA() {
   return (
@@ -30,19 +27,19 @@ export default function CTA() {
             viewport={{ once: true }}
             className="mt-10 flex items-center justify-center gap-x-6"
           >
-            <Link
+            <a
               href="/contact"
               className="group rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all"
             >
               Schedule Free Consultation
               <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="tel:+1-555-123-4567"
               className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
             >
               Call Now <span aria-hidden="true">→</span>
-            </Link>
+            </a>
           </motion.div>
 
           <motion.div

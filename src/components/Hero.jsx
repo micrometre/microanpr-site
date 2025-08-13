@@ -1,8 +1,5 @@
-'use client'
-
 import { ArrowRight, Shield, Zap, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 
 const stats = [
   { name: 'Accuracy Rate', value: '99.9%', icon: Shield },
@@ -46,19 +43,19 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-10 flex items-center justify-center gap-x-6"
           >
-            <Link
+            <a
               href="/contact"
               className="group rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all"
             >
               Get Started Today
               <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/products"
               className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
             >
               View Products <span aria-hidden="true">→</span>
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
 
