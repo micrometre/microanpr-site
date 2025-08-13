@@ -8,13 +8,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MicroANPR - Enterprise Automatic Number Plate Recognition Solutions",
-  description: "Leading provider of cutting-edge ANPR technology for enterprise security, traffic management, and smart city solutions.",
+  title: "MicroANPR - Automatic Number Plate Recognition (ANPR) as a service.",
+  description: "Leading provider of cutting-edge ANPR technology for traffic management, and smart city solutions.",
   keywords: "ANPR, automatic number plate recognition, enterprise security, traffic management, smart cities",
   authors: [{ name: "MicroANPR" }],
   openGraph: {
     title: "MicroANPR - Enterprise ANPR Solutions",
-    description: "Leading provider of cutting-edge ANPR technology for enterprise security, traffic management, and smart city solutions.",
+    description: "Leading provider of cutting-edge ANPR technology as a service for  security, traffic management, and smart city solutions.",
     type: "website",
   },
 };
