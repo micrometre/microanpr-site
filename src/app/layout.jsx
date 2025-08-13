@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -7,7 +6,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "MicroANPR - Automatic Number Plate Recognition (ANPR) as a service.",
   description: "Leading provider of cutting-edge ANPR technology for traffic management, and smart city solutions.",
   keywords: "ANPR, automatic number plate recognition, enterprise security, traffic management, smart cities",
@@ -19,11 +18,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
