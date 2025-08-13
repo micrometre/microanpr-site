@@ -12,15 +12,15 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
             className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
           >
             Next-Generation
@@ -28,9 +28,9 @@ export default function Hero() {
           </motion.h1>
           
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
             className="mt-6 text-lg leading-8 text-gray-600"
           >
             Transform your security and traffic management with our cutting-edge Automatic Number Plate Recognition technology. 
@@ -38,9 +38,9 @@ export default function Hero() {
           </motion.p>
           
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.3, delay: 0.2, ease: "easeOut" }}
             className="mt-10 flex items-center justify-center gap-x-6"
           >
             <a
@@ -61,18 +61,18 @@ export default function Hero() {
 
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
           className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"
         >
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.name}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1 + index * 0.2 }}
+                transition={{ duration: 0.3, delay: 0.35 + index * 0.05, ease: "easeOut" }}
                 className="relative flex flex-col gap-y-3 text-center"
               >
                 <dt className="text-base leading-7 text-gray-600 flex items-center justify-center gap-x-2">
