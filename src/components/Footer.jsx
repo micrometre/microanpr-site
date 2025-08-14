@@ -2,39 +2,34 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
 
 const navigation = {
   solutions: [
-    { name: 'Traffic Management', href: '/solutions/traffic' },
-    { name: 'Security & Access', href: '/solutions/security' },
-    { name: 'Smart Parking', href: '/solutions/parking' },
-    { name: 'Law Enforcement', href: '/solutions/law-enforcement' },
+    { name: 'Traffic Management', href: '/' },
+    { name: 'Security & Access', href: '/' },
+    { name: 'Smart Parking', href: '/' },
+    { name: 'Law Enforcement', href: '/' },
   ],
   company: [
     { name: 'About', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Press', href: '/press' },
-    { name: 'Partners', href: '/partners' },
+    { name: 'Careers', href: '/' },
+    { name: 'Press', href: '/' },
+    { name: 'Partners', href: '/' },
   ],
   resources: [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Support', href: '/support' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Documentation', href: '/' },
+    { name: 'Support', href: '/' },
+    { name: 'Blog', href: '/' },
+    { name: 'Case Studies', href: '/' },
   ],
   legal: [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Security', href: '/security' },
+    { name: 'Privacy Policy', href: '/' },
+    { name: 'Terms of Service', href: '/' },
+    { name: 'Cookie Policy', href: '/' },
+    { name: 'Security', href: '/' },
   ],
   social: [
     {
       name: 'LinkedIn',
       href: '#',
       icon: Linkedin,
-    },
-    {
-      name: 'Twitter',
-      href: '#',
-      icon: Twitter,
     },
     {
       name: 'GitHub',
@@ -60,20 +55,7 @@ export default function Footer() {
                 for enterprise security, traffic management, and smart city solutions worldwide.
               </p>
             </div>
-            <div className="space-y-4">
-              <div className="flex items-center gap-x-3 text-gray-300">
-                <MapPin className="h-5 w-5 flex-none text-gray-400" />
-                <span className="text-sm">123 Technology Drive, Suite 100, San Francisco, CA 94105</span>
-              </div>
-              <div className="flex items-center gap-x-3 text-gray-300">
-                <Phone className="h-5 w-5 flex-none text-gray-400" />
-                <span className="text-sm">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center gap-x-3 text-gray-300">
-                <Mail className="h-5 w-5 flex-none text-gray-400" />
-                <span className="text-sm">contact@microanpr.com</span>
-              </div>
-            </div>
+
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <a

@@ -7,7 +7,6 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Products', href: '/products' },
   { name: 'About', href: '/about' },
-  { name: 'Solutions', href: '#solutions' },
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -48,12 +47,6 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-4">
           <ThemeToggle />
-          <a
-            href="/contact"
-            className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-          >
-            Get Started <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </nav>
 
@@ -67,11 +60,11 @@ export default function Header() {
             className="fixed inset-0 z-50 lg:hidden"
           >
             {/* Backdrop */}
-            <div 
+            <div
               className="fixed inset-0 bg-black/20 dark:bg-black/40"
               onClick={() => setMobileMenuOpen(false)}
             />
-            
+
             {/* Menu Panel */}
             <div className=" inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1u sm:ring-gray-900/10 dark:ring-white/10">
               <div className="flex items-center justify-between">
@@ -99,13 +92,7 @@ export default function Header() {
                     ))}
                   </div>
                   <div className="py-6">
-                    <a
-                      href="/contact"
-                      className="bg-primary-600 hover:bg-primary-700 px-4 py-2 text-sm font-semibold text-white rounded-lg transition-colors block text-center"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Get Started
-                    </a>
+                    <ThemeToggle />
                   </div>
                 </div>
               </div>

@@ -34,30 +34,10 @@ export default function CTA() {
               Schedule Free Consultation
               <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
             </a>
-            <a
-              href="tel:+1-555-123-4567"
-              className="text-sm font-semibold leading-6 text-white hover:text-blue-100 dark:hover:text-blue-200 transition-colors"
-            >
-              Call Now <span aria-hidden="true">→</span>
-            </a>
+   
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2"
-          >
-            <div className="flex items-center justify-center gap-x-3 text-blue-100 dark:text-blue-200">
-              <Phone className="h-5 w-5" />
-              <span className="text-sm">+1 (555) 123-4567</span>
-            </div>
-            <div className="flex items-center justify-center gap-x-3 text-blue-100 dark:text-blue-200">
-              <Mail className="h-5 w-5" />
-              <span className="text-sm">sales@microanpr.com</span>
-            </div>
-          </motion.div>
+       
         </motion.div>
       </div>
     </section>
