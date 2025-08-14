@@ -34,7 +34,7 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section className="py-24 sm:py-32 bg-gray-50">
+    <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-900">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,11 +43,11 @@ export default function Solutions() {
           viewport={{ once: true }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="text-base font-semibold leading-7 text-blue-600">Solutions</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-base font-semibold leading-7 text-blue-600 dark:text-blue-400">Solutions</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             Tailored ANPR solutions for every industry
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
             From traffic management to security enforcement, our ANPR technology adapts to your specific needs 
             and delivers measurable results across diverse applications.
           </p>
@@ -61,18 +61,18 @@ export default function Solutions() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="group relative flex flex-col gap-6 bg-white p-8 ring-1 ring-gray-900/10 hover:ring-blue-600/20 rounded-2xl hover:shadow-xl transition-all duration-300"
+              className="group relative flex flex-col gap-6 bg-white dark:bg-gray-800 p-8 ring-1 ring-gray-900/10 dark:ring-gray-700/20 hover:ring-blue-600/20 dark:hover:ring-blue-400/30 rounded-2xl hover:shadow-xl transition-all duration-300"
             >
               <div>
                 <div className="flex items-center gap-x-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 dark:bg-blue-500 group-hover:bg-blue-700 dark:group-hover:bg-blue-600 transition-colors">
                     <solution.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold leading-8 tracking-tight text-gray-900">
+                  <h3 className="text-xl font-semibold leading-8 tracking-tight text-gray-900 dark:text-white">
                     {solution.name}
                   </h3>
                 </div>
-                <p className="mt-4 text-base leading-7 text-gray-600">
+                <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">
                   {solution.description}
                 </p>
               </div>
@@ -83,7 +83,7 @@ export default function Solutions() {
                     <div className="flex-none">
                       <div className="h-1.5 w-1.5 rounded-full bg-blue-600 mt-2" />
                     </div>
-                    <span className="text-sm text-gray-600">{feature}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -91,7 +91,7 @@ export default function Solutions() {
               <div className="mt-6">
                 <a
                   href={solution.href}
-                  className="text-sm font-semibold leading-6 text-blue-600 hover:text-blue-700 group-hover:underline transition-colors"
+                  className="text-sm font-semibold leading-6 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 group-hover:underline transition-colors"
                 >
                   Learn more <span aria-hidden="true">→</span>
                 </a>
@@ -109,7 +109,7 @@ export default function Solutions() {
         >
           <a
             href="/contact"
-            className="rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
+            className="rounded-lg bg-blue-600 dark:bg-blue-500 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 dark:hover:bg-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:focus-visible:outline-blue-400 transition-colors"
           >
             Discuss Your Requirements
           </a>

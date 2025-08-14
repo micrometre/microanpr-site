@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function CTA() {
   return (
-    <section className="bg-blue-600">
+    <section className="bg-blue-600 dark:bg-blue-700">
       <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -15,7 +15,7 @@ export default function CTA() {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to transform your operations?
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100 dark:text-blue-200">
             Join hundreds of organizations worldwide who trust MicroANPR for their critical 
             number plate recognition needs. Get started today with a personalized consultation.
           </p>
@@ -29,14 +29,14 @@ export default function CTA() {
           >
             <a
               href="/contact"
-              className="group rounded-lg bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all"
+              className="group rounded-lg bg-white dark:bg-gray-100 px-6 py-3 text-sm font-semibold text-blue-600 dark:text-blue-700 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all"
             >
               Schedule Free Consultation
               <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="tel:+1-555-123-4567"
-              className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
+              className="text-sm font-semibold leading-6 text-white hover:text-blue-100 dark:hover:text-blue-200 transition-colors"
             >
               Call Now <span aria-hidden="true">→</span>
             </a>
@@ -49,11 +49,11 @@ export default function CTA() {
             viewport={{ once: true }}
             className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2"
           >
-            <div className="flex items-center justify-center gap-x-3 text-blue-100">
+            <div className="flex items-center justify-center gap-x-3 text-blue-100 dark:text-blue-200">
               <Phone className="h-5 w-5" />
               <span className="text-sm">+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center justify-center gap-x-3 text-blue-100">
+            <div className="flex items-center justify-center gap-x-3 text-blue-100 dark:text-blue-200">
               <Mail className="h-5 w-5" />
               <span className="text-sm">sales@microanpr.com</span>
             </div>
