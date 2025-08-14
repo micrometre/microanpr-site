@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.jsx';
+import ProductHero from '../components/ProductHero.jsx';
+import ProductFeatures from '../components/ProductFeatures.jsx';
+import ProductPricing from '../components/ProductPricing.jsx';
+import ProductSpecs from '../components/ProductSpecs.jsx';
+import CTA from '../components/CTA.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<Layout title="MicroANPR Products - Professional ANPR Solutions">
+  <main>
+    <Header client:load />
+    <ProductHero client:load />
+    <ProductFeatures client:load />
+    <ProductSpecs client:load />
+    <ProductPricing client:load />
+    <CTA client:load />
+    <Footer />
+  </main>
+</Layout>

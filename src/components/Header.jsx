@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const navigation = [
   { name: 'Home', href: '/' },
+  { name: 'Products', href: '/products' },
   { name: 'About', href: '/about' },
   { name: 'Solutions', href: '#solutions' },
   { name: 'Contact', href: '/contact' },
@@ -23,14 +24,16 @@ export default function Header() {
         </div>
         <div className="flex lg:hidden">
           <ThemeToggle />
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300 ml-2"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Menu className="h-6 w-6" aria-hidden="true" />
-          </button>
+          {!mobileMenuOpen && (
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300 ml-2"
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <span className="sr-only">Open main menu</span>
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            </button>
+          )}
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
@@ -61,40 +64,49 @@ export default function Header() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 s lg:hidden  inset-y-0 right-0 z-50 w-full overflow-y-auto  px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+            className="fixed inset-0 z-50 lg:hidden"
           >
-            <div className="flex items-center justify-between">
-              <button
-                type="button"
-                className="-m-2.5 rounded-md p-2.5  text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span className="sr-only">Close menu</span>
-                <X className="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+            {/* Backdrop */}
+            <div 
+              className="fixed inset-0 bg-black/20 dark:bg-black/40"
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            
+            {/* Menu Panel */}
+            <div className=" inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1u sm:ring-gray-900/10 dark:ring-white/10">
+              <div className="flex items-center justify-between">
+                <button
+                  type="button"
+                  className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span className="sr-only">Close menu</span>
+                  <X className="h-6 w-6" aria-hidden="true" />
+                </button>
+              </div>
+              <div className="mt-6 flow-root">
+                <div className="-my-6 divide-y divide-gray-500/10">
+                  <div className="space-y-2 py-6">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                  <div className="py-6">
                     <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-50 text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                      href="/contact"
+                      className="bg-primary-600 hover:bg-primary-700 px-4 py-2 text-sm font-semibold text-white rounded-lg transition-colors block text-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      {item.name}
+                      Get Started
                     </a>
-                  ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="/contact"
-                    className="bg-blue-600 px-4 py-2 text-sm font-semibold text-white rounded-lg hover:bg-blue-700 transition-colors block text-center"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Get Started
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>

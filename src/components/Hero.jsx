@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const stats = [
   { name: 'Accuracy Rate', value: '99.9%', icon: Shield },
   { name: 'Processing Speed', value: '<100ms', icon: Zap },
-  { name: 'Global Clients', value: '500+', icon: Users },
+  { name: 'Regions Supported', value: '5+ Countries', icon: Users },
 ]
 
 export default function Hero() {
