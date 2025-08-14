@@ -93,21 +93,7 @@ const values = [
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="bg-blue-600 py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
-          {stats.map((stat) => (
-            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-              <dt class="text-base leading-7 text-blue-100">{stat.name}</dt>
-              <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-                {stat.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </section>
+
 
     <!-- Values Section -->
     <section class="py-24 bg-gray-50">
@@ -139,99 +125,9 @@ const values = [
       </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="py-24 bg-white">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:text-center">
-          <h2 class="text-base font-semibold leading-7 text-blue-600">Our Team</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Meet the experts behind MicroANPR
-          </p>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            Our leadership team brings decades of experience in AI, computer vision, 
-            and enterprise software development.
-          </p>
-        </div>
-        <ul class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {team.map((person) => (
-            <li>
-              <img 
-                class="aspect-[3/2] w-full rounded-2xl object-cover" 
-                src={person.imageUrl} 
-                alt={person.name}
-                width="300"
-                height="200"
-              />
-              <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
-                {person.name}
-              </h3>
-              <p class="text-base leading-7 text-blue-600">{person.role}</p>
-              <p class="mt-4 text-base leading-7 text-gray-600">{person.bio}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
 
-    <!-- History Section -->
-    <section class="py-24 bg-gray-50">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:text-center">
-          <h2 class="text-base font-semibold leading-7 text-blue-600">Our Journey</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            15 years of innovation
-          </p>
-        </div>
-        <div class="mx-auto mt-16 max-w-2xl">
-          <div class="space-y-8">
-            <div class="flex gap-x-3">
-              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-                <span class="text-white font-semibold text-sm">2010</span>
-              </div>
-              <div>
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">Company Founded</h3>
-                <p class="mt-2 text-sm leading-6 text-gray-600">
-                  MicroANPR was founded with the vision to revolutionize license plate recognition technology.
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-x-3">
-              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-                <span class="text-white font-semibold text-sm">2015</span>
-              </div>
-              <div>
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">Global Expansion</h3>
-                <p class="mt-2 text-sm leading-6 text-gray-600">
-                  Expanded operations to Europe and Asia, serving over 100 enterprise clients.
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-x-3">
-              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-                <span class="text-white font-semibold text-sm">2020</span>
-              </div>
-              <div>
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">AI-Powered Platform</h3>
-                <p class="mt-2 text-sm leading-6 text-gray-600">
-                  Launched our next-generation AI platform with 99.9% accuracy and real-time processing.
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-x-3">
-              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-                <span class="text-white font-semibold text-sm">2025</span>
-              </div>
-              <div>
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">Industry Leadership</h3>
-                <p class="mt-2 text-sm leading-6 text-gray-600">
-                  Now serving 500+ clients across 50 countries, processing over 10 million plates daily.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
+
   </main>
   <Footer />
 </Layout>

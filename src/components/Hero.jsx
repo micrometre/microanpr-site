@@ -59,33 +59,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
-          className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"
-        >
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.name}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.35 + index * 0.05, ease: "easeOut" }}
-                className="relative flex flex-col gap-y-3 text-center"
-              >
-                <dt className="text-base leading-7 text-gray-600 dark:text-gray-300 flex items-center justify-center gap-x-2">
-                  <stat.icon className="h-5 w-5 text-primary-600 dark:text-primary-400" />
-                  {stat.name}
-                </dt>
-                <dd className="text-3xl font-bold leading-9 tracking-tight text-gray-900 dark:text-white">
-                  {stat.value}
-                </dd>
-              </motion.div>
-            ))}
-          </dl>
-        </motion.div>
+
 
         {/* Background decoration */}
         <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
