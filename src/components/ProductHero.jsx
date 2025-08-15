@@ -58,12 +58,13 @@ export default function ProductHero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+          className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 max-w-5xl mx-auto"
         >
           {[
+            { icon: Camera, title: 'Live Stream', description: 'Real-time Processing' },
             { icon: Upload, title: 'Upload Files', description: 'Video & Photos' },
             { icon: Camera, title: 'ANPR Processing', description: 'AI Recognition' },
-            { icon: Download, title: 'Download CSV', description: 'Structured Data' },
+            { icon: Download, title: 'Export CSV/PDF', description: 'Structured Data' },
             { icon: Globe, title: 'Access Anywhere', description: 'Web & Mobile' },
           ].map((feature, index) => (
             <div key={index} className="text-center">
