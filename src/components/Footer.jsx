@@ -9,21 +9,15 @@ const navigation = {
   ],
   company: [
     { name: 'About', href: '/about' },
-    { name: 'Careers', href: '/' },
-    { name: 'Press', href: '/' },
-    { name: 'Partners', href: '/' },
-  ],
-  resources: [
-    { name: 'Documentation', href: '/' },
-    { name: 'Support', href: '/' },
-    { name: 'Blog', href: '/' },
-    { name: 'Case Studies', href: '/' },
+    { name: 'Products', href: '/' },
+    { name: 'Consulting', href: '/' },
   ],
   legal: [
-    { name: 'Privacy Policy', href: '/' },
-    { name: 'Terms of Service', href: '/' },
-    { name: 'Cookie Policy', href: '/' },
-    { name: 'Security', href: '/' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Terms of Use', href: '/terms-of-use' },
+    { name: 'Cookie Policy', href: '/privacy' },
+    { name: 'Security', href: '/security' },
   ],
   social: [
     {
@@ -103,21 +97,6 @@ export default function Footer() {
               </div>
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Resources</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.resources.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
                 <ul role="list" className="mt-6 space-y-4">
@@ -141,14 +120,6 @@ export default function Footer() {
             <p className="text-xs leading-5 text-gray-400">
               &copy; 2025 MicroANPR Technologies, Inc. All rights reserved.
             </p>
-            <div className="flex items-center gap-x-6">
-              <div className="text-xs text-gray-400">
-                ISO 27001 Certified
-              </div>
-              <div className="text-xs text-gray-400">
-                SOC 2 Type II Compliant
-              </div>
-            </div>
           </div>
         </div>
       </div>

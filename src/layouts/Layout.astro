@@ -1,5 +1,6 @@
 ---
 import '../styles/globals.css';
+import CookieBanner from '../components/CookieBanner.jsx';
 
 export interface Props {
   title: string;
@@ -18,14 +19,39 @@ const { title, description = "Transform your security and traffic management wit
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     
-    <!-- Dark mode initialization script -->
+    <!-- Cookie-aware dark mode initialization script -->
     <script is:inline>
-      // Prevent FOUC (Flash of Unstyled Content)
+      // Prevent FOUC (Flash of Unstyled Content) with cookie-aware theme management
       (function() {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const COOKIE_CONSENT_KEY = 'microanpr-cookie-consent';
         
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        // Check if we have cookie consent
+        let hasConsent = false;
+        let functionalAllowed = false;
+        
+        try {
+          const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+          if (consent) {
+            const consentData = JSON.parse(consent);
+            hasConsent = true;
+            functionalAllowed = consentData.functional === true;
+          }
+        } catch (e) {
+          // Ignore parsing errors
+        }
+        
+        let theme = 'light';
+        
+        if (functionalAllowed) {
+          // Use saved theme preference if functional cookies are allowed
+          const savedTheme = localStorage.getItem('theme');
+          theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        } else {
+          // Fall back to system preference if no functional cookie consent
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        
+        if (theme === 'dark') {
           document.documentElement.classList.add('dark');
         }
       })();
@@ -33,5 +59,6 @@ const { title, description = "Transform your security and traffic management wit
   </head>
   <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
     <slot />
+    <CookieBanner client:load />
   </body>
 </html>
