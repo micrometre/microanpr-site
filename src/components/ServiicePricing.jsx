@@ -193,43 +193,43 @@ export default function ServiicePricing() {
           className="mt-12 text-center"
         >
 
-          <section class="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800 mb-10">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-              <div class="mx-auto max-w-4xl text-center">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Simple, transparent pricing</h2>
-                <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+
+          <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800 mb-10">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="mx-auto max-w-4xl text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Simple, transparent pricing</h2>
+                <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
                   Pay only for what you use with no hidden fees or long-term contracts.
                 </p>
               </div>
-              <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <div class="rounded-2xl bg-white dark:bg-gray-900 p-8 ring-1 ring-gray-200 dark:ring-gray-700">
-                  <h3 class="text-lg font-semibold leading-8 text-gray-900 dark:text-white">Starter</h3>
-                  <p class="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300">Perfect for small deployments</p>
-                  <ul class="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
-                    <li class="flex gap-x-3">✓ REST API access</li>
-                    <li class="flex gap-x-3">✓ Basic support</li>
+              <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="rounded-2xl bg-white dark:bg-gray-900 p-8 ring-1 ring-gray-200 dark:ring-gray-700">
+                  <h3 className="text-lg font-semibold leading-8 text-gray-900 dark:text-white">Starter</h3>
+                  <p className="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300">Perfect for small deployments</p>
+                  <ul className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
+                    <li className="flex gap-x-3">✓ REST API access</li>
+                    <li className="flex gap-x-3">✓ Basic support</li>
                   </ul>
                 </div>
-                <div class="rounded-2xl bg-white dark:bg-gray-900 p-8 ring-1 ring-primary-600">
-                  <h3 class="text-lg font-semibold leading-8 text-primary-600">Professional</h3>
-                  <p class="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300">For growing businesses</p>
-                  <ul class="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
-                    <li class="flex gap-x-3">✓ Webhooks & real-time alerts</li>
-                    <li class="flex gap-x-3">✓ Priority support</li>
+                <div className="rounded-2xl bg-white dark:bg-gray-900 p-8 ring-1 ring-primary-600">
+                  <h3 className="text-lg font-semibold leading-8 text-primary-600">Professional</h3>
+                  <p className="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300">For growing businesses</p>
+                  <ul className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
+                    <li className="flex gap-x-3">✓ Webhooks & real-time alerts</li>
+                    <li className="flex gap-x-3">✓ Priority support</li>
                   </ul>
                 </div>
-                <div class="rounded-2xl bg-white dark:bg-gray-900 p-8 ring-1 ring-gray-200 dark:ring-gray-700">
-                  <h3 class="text-lg font-semibold leading-8 text-gray-900 dark:text-white">Enterprise</h3>
-                  <p class="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300">For large scale deployments</p>
-                  <ul class="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
-                    <li class="flex gap-x-3">✓ Custom integrations</li>
-                    <li class="flex gap-x-3">✓ Dedicated support</li>
+                <div className="rounded-2xl bg-white dark:bg-gray-900 p-8 ring-1 ring-gray-200 dark:ring-gray-700">
+                  <h3 className="text-lg font-semibold leading-8 text-gray-900 dark:text-white">Enterprise</h3>
+                  <p className="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300">For large scale deployments</p>
+                  <ul className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
+                    <li className="flex gap-x-3">✓ Custom integrations</li>
+                    <li className="flex gap-x-3">✓ Dedicated support</li>
                   </ul>
                 </div>
               </div>
             </div>
           </section>
-
 
         </motion.div>
 

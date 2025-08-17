@@ -197,63 +197,65 @@ export default function ServiceFeatures() {
             className="mt-20 text-center"
           >
 
-            <section id="features" class="py-24 sm:py-32 bg-white dark:bg-gray-900">
-              <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="mx-auto max-w-2xl lg:text-center">
+
+            <section id="features" className="py-24 sm:py-32 bg-white dark:bg-gray-900">
+              <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="mx-auto max-w-2xl lg:text-center">
 
                   <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
                     Cloud-First
                   </h2>
 
-                  <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                     Everything you need in the cloud
                   </p>
                 </div>
-                <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-                  <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-                    <div class="flex flex-col">
-                      <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                        <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary-600">
-                          <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                  <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                    <div className="flex flex-col">
+                      <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
+                        <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-primary-600">
+                          <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
                           </svg>
                         </div>
                         Instant Scalability
                       </dt>
-                      <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
-                        <p class="flex-auto">Scale from hundreds to millions of license plate reads per day without infrastructure management.</p>
+                      <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
+                        <p className="flex-auto">Scale from hundreds to millions of license plate reads per day without infrastructure management.</p>
                       </dd>
                     </div>
-                    <div class="flex flex-col">
-                      <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                        <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary-600">
-                          <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                    <div className="flex flex-col">
+                      <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
+                        <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-primary-600">
+                          <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                           </svg>
                         </div>
                         Real-time API
                       </dt>
-                      <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
-                        <p class="flex-auto">RESTful API with sub-second response times and real-time webhook notifications.</p>
+                      <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
+                        <p className="flex-auto">RESTful API with sub-second response times and real-time webhook notifications.</p>
                       </dd>
                     </div>
-                    <div class="flex flex-col">
-                      <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                        <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary-600">
-                          <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                    <div className="flex flex-col">
+                      <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
+                        <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-primary-600">
+                          <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                           </svg>
                         </div>
                         Enterprise Security
                       </dt>
-                      <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
-                        <p class="flex-auto">SOC 2 compliant with end-to-end encryption and comprehensive audit trails.</p>
+                      <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
+                        <p className="flex-auto">SOC 2 compliant with end-to-end encryption and comprehensive audit trails.</p>
                       </dd>
                     </div>
                   </dl>
                 </div>
               </div>
             </section>
+
 
 
           </motion.div>

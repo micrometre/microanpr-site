@@ -13,8 +13,8 @@ export default function ServiceHero() {
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-4xl text-center"
         >
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-            SaaS <span class="text-primary-600 dark:text-primary-400">ANPR Solutions</span>
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+            SaaS <span className="text-primary-600 dark:text-primary-400">ANPR Solutions</span>
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:text-xl">
@@ -75,15 +75,15 @@ export default function ServiceHero() {
 
         >
 
-
-          <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-              <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                Powerful cloud-based Automatic Number Plate Recognition services.
-                Scale instantly, pay as you use, and integrate seamlessly with your existing systems.
-              </p>
+         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+                <div className="mx-auto max-w-2xl text-center">
+                    <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+                        Powerful cloud-based Automatic Number Plate Recognition services.
+                        Scale instantly, pay as you use, and integrate seamlessly with your existing systems.
+                    </p>
+                </div>
             </div>
-          </div>
+
 
         </motion.div>
       </div>
