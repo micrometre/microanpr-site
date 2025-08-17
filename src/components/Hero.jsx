@@ -50,12 +50,7 @@ export default function Hero() {
               Get Started Today
               <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
             </a>
-            <a
-              href="/products"
-              className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-            >
-              View Products <span aria-hidden="true">→</span>
-            </a>
+
           </motion.div>
         </motion.div>
 

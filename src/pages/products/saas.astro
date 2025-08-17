@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.jsx";
+import CTA from "../../components/CTA.jsx";
+import Footer from "../../components/Footer.jsx";
+import ServiceHero from "../../components/ServiceHero.jsx";
+import ServiceFeatures from "../../components/ServiceFeatures";
+import ServiceSpecs from "../../components/ServiceSpecs";
+import ServicePricing from "../../components/ServiicePricing.jsx";
+import type { loadRenderers } from "astro:container";
+---
+
+<Layout title="SaaS Solutions - MicroANPR Cloud Services">
+  <main>
+    <Header client:load />
+    <!-- SaaS Hero Section -->
+    <ServiceHero client:load />
+    <ServiceFeatures client:load />
+    <!-- SaaS Features -->
+
+    <ServiceSpecs client:load />
+    <ServicePricing client:load />
+    <!-- Pricing -->
+
+    <CTA client:load />
+    <Footer />
+  </main>
+</Layout>

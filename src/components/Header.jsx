@@ -1,17 +1,25 @@
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Products', href: '/products' },
+  { 
+    name: 'Products', 
+    href: '/products',
+    submenu: [
+      { name: 'SaaS Solutions', href: '/products/saas', description: 'Cloud-based ANPR services' },
+      { name: 'Hardware', href: '/products/hardware', description: 'Physical ANPR devices and systems' }
+    ]
+  },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState(null)
 
   return (
     <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
@@ -36,13 +44,59 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-            >
-              {item.name}
-            </a>
+            <div key={item.name} className="relative">
+              {item.submenu ? (
+                <div
+                  className="flex items-center cursor-pointer group"
+                  onMouseEnter={() => setActiveDropdown(item.name)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  <a
+                    href={item.href}
+                    className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center"
+                  >
+                    {item.name}
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </a>
+                  
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute left-0 top-full mt-2 w-64 rounded-lg bg-white dark:bg-gray-800 shadow-lg ring-1 ring-black/5 dark:ring-white/10 z-50"
+                      >
+                        <div className="p-2">
+                          {item.submenu.map((subItem) => (
+                            <a
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="block rounded-md px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                            >
+                              <div className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
+                                {subItem.name}
+                              </div>
+                              <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                {subItem.description}
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ) : (
+                <a
+                  href={item.href}
+                  className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  {item.name}
+                </a>
+              )}
+            </div>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-4">
@@ -66,7 +120,7 @@ export default function Header() {
             />
 
             {/* Menu Panel */}
-            <div className=" inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1u sm:ring-gray-900/10 dark:ring-white/10">
+            <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:ring-white/10">
               <div className="flex items-center justify-between">
                 <button
                   type="button"
@@ -81,14 +135,29 @@ export default function Header() {
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {item.name}
-                      </a>
+                      <div key={item.name}>
+                        <a
+                          href={item.href}
+                          className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </a>
+                        {item.submenu && (
+                          <div className="ml-4 mt-2 space-y-1">
+                            {item.submenu.map((subItem) => (
+                              <a
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="-mx-3 block rounded-lg px-3 py-2 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {subItem.name}
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                   <div className="py-6">
