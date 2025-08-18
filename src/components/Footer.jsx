@@ -2,10 +2,8 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
 
 const navigation = {
   solutions: [
-    { name: 'Traffic Management', href: '/' },
-    { name: 'Security & Access', href: '/' },
     { name: 'Smart Parking', href: '/' },
-    { name: 'Law Enforcement', href: '/' },
+    { name: 'Traffic Management', href: '/' },
   ],
   company: [
     { name: 'About', href: '/about' },

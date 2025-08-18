@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const stats = [
   { name: 'Space Utilization', value: '95%', icon: Car },
-  { name: 'Entry Processing', value: '<2s', icon: Clock },
+  { name: 'Entry & Exit Processing', value: '<2s', icon: Clock },
   { name: 'Payment Success', value: '99.7%', icon: CreditCard },
   { name: 'Revenue Increase', value: '40%', icon: BarChart },
 ]

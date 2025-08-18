@@ -34,7 +34,7 @@ export default function TrafficHero() {
             transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
             className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300"
           >
-            Transform your city's traffic flow with advanced ANPR technology. Monitor congestion, optimize signal timing, 
+            Monitor congestion, optimize signal timing, 
             enforce regulations, and improve road safety with real-time intelligence and automated systems.
           </motion.p>
           

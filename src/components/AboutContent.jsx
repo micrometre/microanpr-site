@@ -155,8 +155,7 @@ export default function AboutContent() {
                 <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
                   What started as a vision to make license plate recognition more accessible 
                   has grown into a comprehensive platform serving organizations worldwide. 
-                  Today, MicroANPR powers critical infrastructure from parking systems 
-                  to law enforcement operations.
+                  Today, MicroANPR powers critical infrastructure  parking systems.
                 </p>
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 dark:text-gray-300 lg:max-w-none">
                   <div className="relative pl-9">
