@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.jsx';
+import TrafficHero from '../components/TrafficHero.jsx';
+import TrafficFeatures from '../components/TrafficFeatures.jsx';
+import TrafficSolutions from '../components/TrafficSolutions.jsx';
+import TrafficBenefits from '../components/TrafficBenefits.jsx';
+import Testimonials from '../components/Testimonials.jsx';
+import CTA from '../components/CTA.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<Layout title="Traffic Management Solutions - Intelligent ANPR Systems | MicroANPR">
+  <main>
+    <Header client:load />
+    <TrafficHero client:load />
+    <TrafficFeatures client:load />
+    <TrafficSolutions client:load />
+    <TrafficBenefits client:load />
+    <Testimonials client:load />
+    <CTA client:load />
+    <Footer />
+  </main>
+</Layout>

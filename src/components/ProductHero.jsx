@@ -1,81 +1,80 @@
 import { motion } from 'framer-motion'
-import { Camera, Upload, Download, Globe } from 'lucide-react'
+import { Camera, ArrowRight, ShoppingCart } from 'lucide-react'
 
 export default function ProductHero() {
   return (
-    <section className="relative bg-gradient-to-br from-primary-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 pt-20 pb-16 overflow-hidden">
-      <div className="absolute inset-0 bg-grid-gray-100 dark:bg-grid-gray-800/50 bg-[size:20px_20px] opacity-50" />
-      
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mx-auto max-w-4xl text-center"
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="mx-auto max-w-2xl text-center"
         >
-          <div className="mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.05, ease: "easeOut" }}
+            className="mb-8"
+          >
             <span className="inline-flex items-center rounded-full bg-primary-100 dark:bg-primary-900/30 px-6 py-2 text-sm font-medium text-primary-700 dark:text-primary-300 ring-1 ring-inset ring-primary-700/10 dark:ring-primary-300/20">
               <Camera className="mr-2 h-4 w-4" />
-              Professional ANPR Solutions
+              Professional Hardware Solutions
             </span>
-          </div>
+          </motion.div>
           
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl">
-            MicroANPR
-            <span className="block text-primary-600 dark:text-primary-400 mt-2">
-              Products & Services
-            </span>
-          </h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
+            className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl"
+          >
+            Hardware <span className="text-primary-600 dark:text-primary-400">ANPR Solutions</span>
+          </motion.h1>
           
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:text-xl">
-            Automatic Number Plate Recognition (ANPR) as a service. Get quickly up and running 
-            with minimal upfront cost and access professional ANPR technology from anywhere.
-          </p>
-
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
+            className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            Robust, weather-resistant ANPR hardware systems designed for maximum reliability. 
+            From single-lane cameras to multi-lane gantries, we have the perfect solution for your deployment.
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.2, ease: "easeOut" }}
+            className="mt-10 flex items-center justify-center gap-x-6"
+          >
+            <a
               href="/contact"
-              className="bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900 px-8 py-4 text-lg font-semibold text-white rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="group rounded-lg bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-all"
             >
-              Contact Us to Learn More
-            </motion.a>
-            
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#features"
-              className="border border-gray-300 dark:border-gray-600 hover:border-primary-600 dark:hover:border-primary-400 px-8 py-4 text-lg font-semibold text-gray-900 dark:text-gray-100 rounded-xl transition-all duration-200 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+              Request Quote
+              <ShoppingCart className="ml-2 h-4 w-4 inline group-hover:scale-110 transition-transform" />
+            </a>
+            <a
+              href="#products"
+              className="group text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
-              View Features
-            </motion.a>
-          </div>
+              View Products 
+              <ArrowRight className="ml-1 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
+            </a>
+          </motion.div>
         </motion.div>
 
-        {/* Feature icons grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 max-w-5xl mx-auto"
-        >
-          {[
-            { icon: Camera, title: 'Live Stream', description: 'Real-time Processing' },
-            { icon: Upload, title: 'Upload Files', description: 'Video & Photos' },
-            { icon: Camera, title: 'ANPR Processing', description: 'AI Recognition' },
-            { icon: Download, title: 'Export CSV/PDF', description: 'Structured Data' },
-            { icon: Globe, title: 'Access Anywhere', description: 'Web & Mobile' },
-          ].map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="mx-auto h-12 w-12 rounded-lg bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-3">
-                <feature.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
-              </div>
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">{feature.title}</h3>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{feature.description}</p>
-            </div>
-          ))}
-        </motion.div>
+        {/* Background decoration */}
+        <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+          <div
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 dark:opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
+        </div>
       </div>
     </section>
   )

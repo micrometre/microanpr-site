@@ -9,8 +9,8 @@ const navigation = {
   ],
   company: [
     { name: 'About', href: '/about' },
-    { name: 'Products', href: '/' },
-    { name: 'Consulting', href: '/' },
+    { name: 'SaaS Solutions', href: '/products/saas' },
+    { name: 'Hardware ANPR devices and systems', href: '/products/hardware' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy-policy' },
@@ -27,7 +27,7 @@ const navigation = {
     },
     {
       name: 'GitHub',
-      href: '#',
+      href: 'https://github.com/micrometre',
       icon: Github,
     },
   ],
@@ -56,6 +56,19 @@ export default function Footer() {
                 <Mail className="h-5 w-5 text-gray-400" />
                 <span className="text-sm text-gray-300">info@microanpr.com</span>
               </div>
+            </div>
+
+            <div className="flex space-x-6">
+              {navigation.social.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-400 hover:text-gray-300 transition-colors"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -111,18 +124,6 @@ export default function Footer() {
               </ul>
             </div>
             
-            <div className="flex space-x-6">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-400 hover:text-gray-300 transition-colors"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
           </div>
         </div>
         

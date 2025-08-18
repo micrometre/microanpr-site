@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.jsx';
+import LawEnforcementHero from '../components/LawEnforcementHero.jsx';
+import LawEnforcementFeatures from '../components/LawEnforcementFeatures.jsx';
+import LawEnforcementSolutions from '../components/LawEnforcementSolutions.jsx';
+import LawEnforcementBenefits from '../components/LawEnforcementBenefits.jsx';
+import Testimonials from '../components/Testimonials.jsx';
+import CTA from '../components/CTA.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<Layout title="Law Enforcement Solutions - Professional ANPR Systems | MicroANPR">
+  <main>
+    <Header client:load />
+    <LawEnforcementHero client:load />
+    <LawEnforcementFeatures client:load />
+    <LawEnforcementSolutions client:load />
+    <LawEnforcementBenefits client:load />
+    <Testimonials client:load />
+    <CTA client:load />
+    <Footer />
+  </main>
+</Layout>

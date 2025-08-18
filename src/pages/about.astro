@@ -2,101 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
-import { Users, Award, Globe, Zap } from 'lucide-react';
-
-
-const values = [
-  {
-    name: 'Innovation',
-    description: 'We continuously push the boundaries of ANPR technology to deliver cutting-edge solutions.',
-    icon: Zap,
-  },
-  {
-    name: 'Reliability',
-    description: 'Our systems are built for 24/7 operation with enterprise-grade reliability and uptime.',
-    icon: Award,
-  },
-  {
-    name: 'Global Reach',
-    description: 'Supporting organizations worldwide with local expertise and global best practices.',
-    icon: Globe,
-  },
-  {
-    name: 'Partnership',
-    description: 'We work closely with our clients to understand their needs and deliver tailored solutions.',
-    icon: Users,
-  },
-]
+import AboutHero from '../components/AboutHero.jsx';
+import AboutContent from '../components/AboutContent.jsx';
+import CTA from '../components/CTA.jsx';
 ---
 
 <Layout title="About MicroANPR - Leading ANPR Technology Company">
   <Header client:load />
   <main>
-    <!-- Hero Section -->
-    <section class="py-24 relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-            About MicroANPR
-          </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-900 dark:text-white">
-            Leading the future of Automatic Number Plate Recognition technology with 
-            innovative solutions that transform how organizations manage security, 
-            traffic, and access control.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="py-24 bg-white dark:bg-gray-900">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:text-center">
-          <h2 class="text-base font-semibold leading-7 text-blue-600 dark:text-blue-400">Our Mission</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            Empowering organizations with intelligent recognition technology
-          </p>
-          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Founded in 2010, MicroANPR has been at the forefront of computer vision and 
-            artificial intelligence, specifically focused on Automatic Number Plate Recognition. 
-            Our mission is to provide the most accurate, reliable, and scalable ANPR solutions 
-            that help organizations enhance security, optimize operations, and create smarter environments.
-          </p>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Values Section -->
-    <section class="py-24 bg-gray-50 dark:bg-gray-800">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:text-center">
-          <h2 class="text-base font-semibold leading-7 text-blue-600 dark:text-blue-400">Our Values</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            What drives us every day
-          </p>
-          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Our core values guide everything we do, from product development to customer support.
-          </p>
-        </div>
-        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            {values.map((value) => (
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 dark:bg-blue-500">
-                    <value.icon className="h-6 w-6 text-white" />
-                  </div>
-                  {value.name}
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-300">{value.description}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
-    </section>
+    <AboutHero client:load />
+    <AboutContent client:load />
+    <CTA client:load />
   </main>
   <Footer />
+</Layout>
 </Layout>
