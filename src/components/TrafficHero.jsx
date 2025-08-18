@@ -80,7 +80,6 @@ export default function TrafficHero() {
                   <stat.icon className="h-6 w-6 text-white" aria-hidden="true" />
                 </div>
                 <dt className="text-sm font-medium leading-6 text-gray-600 dark:text-gray-400">{stat.name}</dt>
-                <dd className="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">{stat.value}</dd>
               </motion.div>
             ))}
           </dl>

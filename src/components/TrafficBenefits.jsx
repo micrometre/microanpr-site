@@ -6,28 +6,24 @@ const benefits = [
     name: 'Reduce Congestion',
     description: 'Cut traffic congestion by up to 35% through intelligent flow optimization and adaptive signal control.',
     icon: TrendingDown,
-    stat: '35%',
     metric: 'Congestion Reduction'
   },
   {
     name: 'Save Travel Time', 
     description: 'Minimize journey times with optimized routing and reduced waiting at intersections.',
     icon: Clock,
-    stat: '20%',
     metric: 'Time Savings'
   },
   {
     name: 'Lower Emissions',
     description: 'Reduce vehicle emissions and fuel consumption through smoother traffic flow and less idling.',
     icon: Leaf,
-    stat: '25%',
     metric: 'Emission Reduction'
   },
   {
     name: 'Improve Safety',
     description: 'Enhance road safety through automated enforcement and incident detection systems.',
     icon: Shield,
-    stat: '40%',
     metric: 'Accident Reduction'
   },
 ]

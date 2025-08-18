@@ -2,20 +2,7 @@ import { Car, Shield, Building, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const solutions = [
-  {
-    name: 'Traffic Management',
-    description: 'Optimize traffic flow, monitor congestion, and enforce traffic regulations with intelligent ANPR systems.',
-    icon: Car,
-    href: '/traffic-management',
-    features: ['Real-time traffic monitoring', 'Congestion analysis', 'Speed enforcement', 'Journey time measurement'],
-  },
-  {
-    name: 'Security & Access Control',
-    description: 'Secure facilities and automate access control with advanced number plate recognition technology.',
-    icon: Shield,
-    href: '/security-access',
-    features: ['Automatic gate control', 'Visitor management', 'Blacklist monitoring', 'Security alerts'],
-  },
+
   {
     name: 'Smart Parking',
     description: 'Revolutionize parking management with automated entry, payment processing, and space optimization.',
@@ -24,12 +11,13 @@ const solutions = [
     features: ['Automated entry/exit', 'Payment integration', 'Space optimization', 'Customer analytics'],
   },
   {
-    name: 'Law Enforcement',
-    description: 'Support law enforcement operations with real-time vehicle tracking and database integration.',
-    icon: Users,
-    href: '/law-enforcement',
-    features: ['Stolen vehicle alerts', 'BOLO notifications', 'Evidence collection', 'Database integration'],
+    name: 'Traffic Management',
+    description: 'Optimize traffic flow, monitor congestion, and enforce traffic regulations with intelligent ANPR systems.',
+    icon: Car,
+    href: '/traffic-management',
+    features: ['Real-time traffic monitoring', 'Congestion analysis', 'Speed enforcement', 'Journey time measurement'],
   },
+
 ]
 
 export default function Solutions() {
@@ -48,7 +36,7 @@ export default function Solutions() {
             Tailored ANPR solutions for every industry
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            From traffic management to security enforcement, our ANPR technology adapts to your specific needs 
+            From traffic management to security enforcement, our ANPR technology adapts to your specific needs
             and delivers measurable results across diverse applications.
           </p>
         </motion.div>

@@ -6,28 +6,24 @@ const benefits = [
     name: 'Increase Revenue',
     description: 'Maximize parking revenue through optimized space utilization and dynamic pricing strategies.',
     icon: TrendingUp,
-    stat: '40%',
     metric: 'Revenue Increase'
   },
   {
     name: 'Reduce Wait Times', 
     description: 'Eliminate queues and reduce customer wait times with automated entry and exit systems.',
     icon: Clock,
-    stat: '75%',
     metric: 'Faster Processing'
   },
   {
     name: 'Improve Satisfaction',
     description: 'Enhance customer experience with seamless parking, mobile payments, and space finding.',
     icon: Users,
-    stat: '90%',
     metric: 'Customer Satisfaction'
   },
   {
     name: 'Lower Operating Costs',
     description: 'Reduce staffing costs and operational overhead through automated parking management.',
     icon: DollarSign,
-    stat: '60%',
     metric: 'Cost Reduction'
   },
 ]

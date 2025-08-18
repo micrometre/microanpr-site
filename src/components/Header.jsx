@@ -15,10 +15,8 @@ const navigation = [
   { 
     name: 'Solutions', 
     submenu: [
-      { name: 'Traffic Management', href: '/traffic-management', description: 'Intelligent traffic flow optimization' },
-      { name: 'Security & Access', href: '/security-access', description: 'Advanced security and access control' },
       { name: 'Smart Parking', href: '/smart-parking', description: 'Automated parking management' },
-      { name: 'Law Enforcement', href: '/law-enforcement', description: 'Real-time vehicle tracking support' }
+      { name: 'Traffic Management', href: '/traffic-management', description: 'Intelligent traffic flow optimization' },
     ]
   },
   { name: 'About', href: '/about' },
