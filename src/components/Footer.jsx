@@ -2,13 +2,12 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
 
 const navigation = {
   solutions: [
-    { name: 'Smart Parking', href: '/' },
-    { name: 'Traffic Management', href: '/' },
-  ],
-  company: [
-    { name: 'About', href: '/about' },
+    { name: 'Smart Parking', href: '/smart-parking' },
     { name: 'SaaS Solutions', href: '/products/saas' },
     { name: 'Hardware ANPR devices and systems', href: '/products/hardware' },
+  ],
+  company: [
+    { name: 'blog', href: 'https://henok.cloud/articles/' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy-policy' },
@@ -72,12 +71,14 @@ export default function Footer() {
 
           {/* Second Column - Navigation Links */}
           <div className="grid grid-cols-2 gap-8">
+
             <div>
-              <h3 className="text-sm font-semibold leading-6 text-white">Solutions</h3>
+              <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
               <ul role="list" className="mt-6 space-y-4">
-                {navigation.solutions.map((item) => (
+                {navigation.company.map((item) => (
                   <li key={item.name}>
                     <a
+                      target='_blank'
                       href={item.href}
                       className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
                     >
@@ -88,9 +89,9 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
+              <h3 className="text-sm font-semibold leading-6 text-white">Solutions</h3>
               <ul role="list" className="mt-6 space-y-4">
-                {navigation.company.map((item) => (
+                {navigation.solutions.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}

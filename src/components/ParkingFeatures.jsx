@@ -22,16 +22,6 @@ const features = [
     description: 'Comprehensive reporting on occupancy rates, revenue, and customer behavior patterns.',
     icon: BarChart3,
   },
-  {
-    name: 'Flexible Pricing Models',
-    description: 'Dynamic pricing based on demand, time-of-day, and special events for maximum revenue.',
-    icon: Clock,
-  },
-  {
-    name: 'Mobile App Integration',
-    description: 'Customer-facing mobile apps for reservations, payments, and finding available spaces.',
-    icon: Smartphone,
-  },
 ]
 
 export default function ParkingFeatures() {

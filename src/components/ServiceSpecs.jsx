@@ -42,7 +42,7 @@ const specifications = [
     bgColor: "bg-purple-100 dark:bg-purple-900/30",
     specs: [
       { label: "Recognition Accuracy", value: "High precision AI algorithms", icon: CheckCircle },
-      { label: "Output Format", value: "CSV with timestamps & coordinates", icon: Database },
+      { label: "Output Format", value: "CSV & PDF with timestamps & coordinates", icon: Database },
       { label: "Processing Time", value: "Depends on file size & complexity", icon: Clock },
       { label: "Data Privacy", value: "Only license plates captured", icon: CheckCircle }
     ]

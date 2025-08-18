@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const benefits = [
   {
     name: 'Increase Revenue',
-    description: 'Maximize parking revenue through optimized space utilization and dynamic pricing strategies.',
+    description: 'Maximize parking revenue through optimized space utilization and efficient payment collection systems.',
     icon: TrendingUp,
     metric: 'Revenue Increase'
   },

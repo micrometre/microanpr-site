@@ -21,7 +21,7 @@ const pricingPlans = [
     features: [
       "Unlimited file uploads",
       "Any video length processing",
-      "CSV output format",
+      "CSV & PDF output format",
       "Web and mobile access",
       "Email support",
       "Cancel anytime",

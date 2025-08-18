@@ -14,23 +14,11 @@ const solutions = [
     icon: Building2,
     features: ['Employee parking allocation', 'Visitor management', 'Security integration', 'Usage reporting'],
   },
-  {
-    name: 'Airport Parking',
-    description: 'Large-scale parking operations for airports with long-term and short-term parking solutions.',
-    icon: Plane,
-    features: ['Terminal integration', 'Long-term storage', 'Shuttle coordination', 'Flight-based pricing'],
-  },
-  {
-    name: 'Healthcare Facilities',
-    description: 'Patient, visitor, and staff parking with priority allocation and accessibility features.',
-    icon: Hospital,
-    features: ['Patient priority parking', 'Emergency vehicle access', 'Staff allocation', 'Accessibility compliance'],
-  },
 ]
 
 export default function ParkingSolutions() {
   return (
-    <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-900">
+    <section className="py-24 sm:py-2 bg-gray-50 dark:bg-gray-900">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -101,7 +89,7 @@ export default function ParkingSolutions() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-16 py-8 text-center"
         >
           <a
             href="/contact"

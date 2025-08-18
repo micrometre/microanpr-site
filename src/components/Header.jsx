@@ -16,7 +16,6 @@ const navigation = [
     name: 'Solutions', 
     submenu: [
       { name: 'Smart Parking', href: '/smart-parking', description: 'Automated parking management' },
-      { name: 'Traffic Management', href: '/traffic-management', description: 'Intelligent traffic flow optimization' },
     ]
   },
   { name: 'About', href: '/about' },

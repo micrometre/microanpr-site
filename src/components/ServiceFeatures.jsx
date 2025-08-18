@@ -11,7 +11,10 @@ import {
   Clock,
   Zap,
   Database,
-  CheckCircle
+  CheckCircle,
+  Video,
+  Wifi,
+  Camera
 } from 'lucide-react'
 
 const features = [
@@ -22,20 +25,20 @@ const features = [
     bgColor: "bg-blue-100 dark:bg-blue-900/30",
     items: [
       {
+        icon: Video,
+        title: "Live Camera Processing",
+        description: "Real-time ANPR processing from live video streams with edge device integration for instant results."
+      },
+      {
+        icon: Wifi,
+        title: "Edge Device Support",
+        description: "Deploy edge computing devices for local processing, reducing latency and improving reliability."
+      },
+      {
         icon: Upload,
         title: "Unlimited File Uploads",
         description: "Upload an unlimited number of files containing video footage or photos for processing."
       },
-      {
-        icon: FileVideo,
-        title: "Any Video Format",
-        description: "Process video footage of any length in the required format with high accuracy recognition."
-      },
-      {
-        icon: Download,
-        title: "Downloadable CSV Results",
-        description: "Get all captured number plates in a structured, downloadable CSV file format."
-      }
     ]
   },
   {
@@ -129,7 +132,7 @@ export default function ServiceFeatures() {
               </div>
 
               {/* Features Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className={`grid grid-cols-1 gap-8 ${category.items.length > 3 ? 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3' : 'md:grid-cols-3'}`}>
                 {category.items.map((feature, featureIndex) => (
                   <motion.div
                     key={featureIndex}
