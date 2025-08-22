@@ -8,7 +8,7 @@ const navigation = [
   { 
     name: 'Products', 
     submenu: [
-      { name: 'SaaS Solutions', href: '/products/saas', description: 'Cloud-based ANPR services' },
+      { name: 'SaaS Solutions', href: '/microanpr', description: 'Cloud-based ANPR services' },
       { name: 'Hardware', href: '/products/hardware', description: 'Physical ANPR devices and systems' }
     ]
   },
