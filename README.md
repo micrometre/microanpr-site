@@ -31,6 +31,7 @@ A modern website for MicroANPR built with [Astro](https://astro.build) and React
 
 All commands are run from the root of the project, from a terminal:
 
+
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |

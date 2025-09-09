@@ -11,10 +11,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^3.6.3",
+    "@astrojs/react": "^4.3.1",
     "@astrojs/tailwind": "^5.1.2",
     "@headlessui/react": "^2.2.7",
-    "astro": "^4.15.9",
+    "astro": "^5.13.6",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.539.0",
